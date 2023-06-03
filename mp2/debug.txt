@@ -1,0 +1,421 @@
+0 > Check timeout, 1684726746.0202422,1684726745.5202398, 0.5000643730163574
+0 > STATE state="CANDIDATE"
+0 > STATE term=2
+0 > SEND 1 RequestVotes 2
+0 > SEND 2 RequestVotes 2
+1 < RECEIVE 0 RequestVotes 2
+2 < RECEIVE 0 RequestVotes 2
+1 > Receive Message at time 1684726746.105925
+2 > Receive Message at time 1684726746.136821
+1 > SEND 0 RequestVotesResponse 2 true
+0 < RECEIVE 1 RequestVotesResponse 2 true
+2 > SEND 0 RequestVotesResponse 2 true
+0 > Receive Message at time 1684726746.291319
+0 > STATE state="LEADER"
+0 > STATE leader=0
+0 > =================LEADER SELECTED==========
+1 < RECEIVE 0 AppendEntries 2 0
+0 > SEND 1 AppendEntries 2 0
+0 > SEND 2 AppendEntries 2 0
+2 < RECEIVE 0 AppendEntries 2 0
+1 > Receive Message at time 1684726746.6836278
+2 > Receive Message at time 1684726746.7610388
+1 > STATE term=2
+0 < RECEIVE 2 RequestVotesResponse 2 true
+0 > SEND 2 AppendEntries 2 0
+2 > STATE term=2
+1 > STATE state="FOLLOWER"
+1 > STATE leader=0
+0 > SEND 1 AppendEntries 2 0
+2 > STATE state="FOLLOWER"
+0 > SEND 2 AppendEntries 2 0
+2 > STATE leader=0
+1 > SEND 0 AppendEntriesResponse 2 true
+1 < RECEIVE 0 AppendEntries 2 0
+1 > Receive Message at time 1684726747.0649452
+1 > STATE term=2
+1 > STATE state="FOLLOWER"
+1 > STATE leader=0
+1 > SEND 0 AppendEntriesResponse 2 true
+2 > SEND 0 AppendEntriesResponse 2 true
+0 < LOG 57AyrZKkDOBUOEHeBM5bkKex5_5ldWpzRz9B59XfBz0
+0 > STATE log[1]=[2,"57AyrZKkDOBUOEHeBM5bkKex5_5ldWpzRz9B59XfBz0"]
+0 > SEND 1 AppendEntries 2 0 ["57AyrZKkDOBUOEHeBM5bkKex5_5ldWpzRz9B59XfBz0"]
+0 > SEND 2 AppendEntries 2 0 ["57AyrZKkDOBUOEHeBM5bkKex5_5ldWpzRz9B59XfBz0"]
+2 < RECEIVE 0 AppendEntries 2 0
+2 > Receive Message at time 1684726747.1232843
+1 < RECEIVE 0 AppendEntries 2 0 ["57AyrZKkDOBUOEHeBM5bkKex5_5ldWpzRz9B59XfBz0"]
+0 > SEND 1 AppendEntries 2 0
+1 > Receive Message at time 1684726747.138333
+2 > STATE term=2
+0 > SEND 2 AppendEntries 2 0
+2 > STATE state="FOLLOWER"
+1 > STATE term=2
+0 < RECEIVE 1 AppendEntriesResponse 2 true
+2 > STATE leader=0
+1 > STATE state="FOLLOWER"
+0 > SEND 1 AppendEntries 2 0
+2 > SEND 0 AppendEntriesResponse 2 true
+1 > STATE leader=0
+1 > STATE log[1]=[2,"57AyrZKkDOBUOEHeBM5bkKex5_5ldWpzRz9B59XfBz0"]
+0 > SEND 2 AppendEntries 2 0
+2 < RECEIVE 0 AppendEntries 2 0
+1 > SEND 0 AppendLogResponse 2 true
+2 > Receive Message at time 1684726747.5285487
+0 < RECEIVE 2 AppendEntriesResponse 2 true
+0 > SEND 1 AppendEntries 2 0
+1 < RECEIVE 0 AppendEntries 2 0
+2 > STATE term=2
+0 > SEND 2 AppendEntries 2 0
+1 > Receive Message at time 1684726747.670929
+2 > STATE state="FOLLOWER"
+2 > STATE leader=0
+1 > STATE term=2
+0 < RECEIVE 1 AppendEntriesResponse 2 true
+1 > STATE state="FOLLOWER"
+0 > SEND 1 AppendEntries 2 0
+2 > SEND 0 AppendEntriesResponse 2 true
+1 > STATE leader=0
+0 > SEND 2 AppendEntries 2 0
+2 < RECEIVE 0 AppendEntries 2 0 ["57AyrZKkDOBUOEHeBM5bkKex5_5ldWpzRz9B59XfBz0"]
+1 > SEND 0 AppendEntriesResponse 2 true
+0 < LOG 25SoXYTEszr-XP2XoLnLaDn71Q4l-ZkdLsIoHtIwoN0
+2 > Receive Message at time 1684726748.0606618
+1 < RECEIVE 0 AppendEntries 2 0
+0 > STATE log[2]=[2,"25SoXYTEszr-XP2XoLnLaDn71Q4l-ZkdLsIoHtIwoN0"]
+1 > Receive Message at time 1684726748.168687
+2 > STATE term=2
+2 > STATE state="FOLLOWER"
+1 > STATE term=2
+0 > SEND 1 AppendEntries 2 0 ["25SoXYTEszr-XP2XoLnLaDn71Q4l-ZkdLsIoHtIwoN0"]
+2 > STATE leader=0
+0 > SEND 2 AppendEntries 2 0 ["25SoXYTEszr-XP2XoLnLaDn71Q4l-ZkdLsIoHtIwoN0"]
+1 > STATE state="FOLLOWER"
+1 > STATE leader=0
+2 > STATE log[1]=[2,"57AyrZKkDOBUOEHeBM5bkKex5_5ldWpzRz9B59XfBz0"]
+0 > SEND 1 AppendEntries 2 0
+2 > SEND 0 AppendLogResponse 2 true
+1 > SEND 0 AppendEntriesResponse 2 true
+0 > SEND 2 AppendEntries 2 0
+2 < RECEIVE 0 AppendEntries 2 0
+1 < RECEIVE 0 AppendEntries 2 0
+2 > Receive Message at time 1684726748.6387713
+0 < RECEIVE 2 AppendEntriesResponse 2 true
+1 > Receive Message at time 1684726748.6708817
+0 > SEND 1 AppendEntries 2 0
+2 > STATE term=2
+1 > STATE term=2
+2 > STATE state="FOLLOWER"
+0 > SEND 2 AppendEntries 2 0
+1 > STATE state="FOLLOWER"
+2 > STATE leader=0
+0 < RECEIVE 1 AppendLogResponse 2 true
+1 > STATE leader=0
+2 > SEND 0 AppendEntriesResponse 2 true
+1 > SEND 0 AppendEntriesResponse 2 true
+0 > STATE commitIndex=2
+1 < RECEIVE 0 AppendEntries 2 0
+2 < RECEIVE 0 AppendEntries 2 0
+0 > COMMITTED 25SoXYTEszr-XP2XoLnLaDn71Q4l-ZkdLsIoHtIwoN0 2
+2 > Receive Message at time 1684726749.118909
+0 > SEND 1 Committed 2 2
+1 > Receive Message at time 1684726749.1186998
+2 > STATE term=2
+0 > SEND 2 Committed 2 2
+2 > STATE state="FOLLOWER"
+1 > STATE term=2
+0 > SEND 1 AppendEntries 2 0
+2 > STATE leader=0
+0 > SEND 2 AppendEntries 2 0
+1 > STATE state="FOLLOWER"
+2 > SEND 0 AppendEntriesResponse 2 true
+1 > STATE leader=0
+0 < RECEIVE 2 AppendEntriesResponse 2 true
+2 < RECEIVE 0 AppendEntries 2 0
+1 > SEND 0 AppendEntriesResponse 2 true
+0 > SEND 1 AppendEntries 2 0
+2 > Receive Message at time 1684726749.540624
+2 > STATE term=2
+1 < RECEIVE 0 AppendEntries 2 0 ["25SoXYTEszr-XP2XoLnLaDn71Q4l-ZkdLsIoHtIwoN0"]
+2 > STATE state="FOLLOWER"
+0 > SEND 2 AppendEntries 2 0
+2 > STATE leader=0
+1 > Receive Message at time 1684726749.6657355
+0 < LOG eHRd4Q-dJjBkhjJ7HHTmadk9bNzouJPUwpW_gLUztkc
+2 > SEND 0 AppendEntriesResponse 2 true
+1 > STATE term=2
+0 > STATE log[3]=[2,"eHRd4Q-dJjBkhjJ7HHTmadk9bNzouJPUwpW_gLUztkc"]
+2 < RECEIVE 0 AppendEntries 2 0
+1 > STATE state="FOLLOWER"
+2 > Receive Message at time 1684726749.8988307
+0 > SEND 1 AppendEntries 2 0 ["eHRd4Q-dJjBkhjJ7HHTmadk9bNzouJPUwpW_gLUztkc"]
+1 > STATE leader=0
+0 > SEND 2 AppendEntries 2 0 ["eHRd4Q-dJjBkhjJ7HHTmadk9bNzouJPUwpW_gLUztkc"]
+2 > STATE term=2
+1 > STATE log[2]=[2,"25SoXYTEszr-XP2XoLnLaDn71Q4l-ZkdLsIoHtIwoN0"]
+0 > SEND 1 AppendEntries 2 0
+2 > STATE state="FOLLOWER"
+1 > SEND 0 AppendLogResponse 2 true
+2 > STATE leader=0
+1 < RECEIVE 0 AppendEntries 2 0
+0 > SEND 2 AppendEntries 2 0
+2 > SEND 0 AppendEntriesResponse 2 true
+1 > Receive Message at time 1684726750.2401571
+0 < RECEIVE 1 AppendEntriesResponse 2 true
+2 < RECEIVE 0 AppendEntries 2 0 ["25SoXYTEszr-XP2XoLnLaDn71Q4l-ZkdLsIoHtIwoN0"]
+0 > SEND 1 AppendEntries 2 0
+1 > STATE term=2
+2 > Receive Message at time 1684726750.3647697
+0 > SEND 2 AppendEntries 2 0
+1 > STATE state="FOLLOWER"
+2 > STATE term=2
+1 > STATE leader=0
+0 < LOG htOpg3wwtQ0rIwhv0B065cXVPsdCBIGsGuft6plVSgc
+2 > STATE state="FOLLOWER"
+0 > STATE log[4]=[2,"htOpg3wwtQ0rIwhv0B065cXVPsdCBIGsGuft6plVSgc"]
+2 > STATE leader=0
+1 > SEND 0 AppendEntriesResponse 2 true
+0 > SEND 1 AppendEntries 2 0 ["htOpg3wwtQ0rIwhv0B065cXVPsdCBIGsGuft6plVSgc"]
+1 < RECEIVE 0 AppendEntries 2 0
+2 > STATE log[2]=[2,"25SoXYTEszr-XP2XoLnLaDn71Q4l-ZkdLsIoHtIwoN0"]
+0 > SEND 2 AppendEntries 2 0 ["htOpg3wwtQ0rIwhv0B065cXVPsdCBIGsGuft6plVSgc"]
+1 > Receive Message at time 1684726750.7835677
+2 > SEND 0 AppendLogResponse 2 true
+0 > SEND 1 AppendEntries 2 0
+1 > STATE term=2
+2 < RECEIVE 0 AppendEntries 2 0
+0 > SEND 2 AppendEntries 2 0
+1 > STATE state="FOLLOWER"
+2 > Receive Message at time 1684726750.9695046
+1 > STATE leader=0
+0 < RECEIVE 1 AppendEntriesResponse 2 true
+2 > STATE term=2
+1 > SEND 0 AppendEntriesResponse 2 true
+0 > SEND 1 AppendEntries 2 0
+2 > STATE state="FOLLOWER"
+0 > SEND 2 AppendEntries 2 0
+2 > STATE leader=0
+0 < RECEIVE 2 AppendLogResponse 2 true
+2 > SEND 0 AppendEntriesResponse 2 true
+0 > STATE commitIndex=4
+0 > COMMITTED htOpg3wwtQ0rIwhv0B065cXVPsdCBIGsGuft6plVSgc 4
+2 < RECEIVE 0 AppendEntries 2 0
+0 > SEND 1 Committed 2 4
+2 > Receive Message at time 1684726751.4878943
+0 > SEND 2 Committed 2 4
+0 > SEND 1 AppendEntries 2 0
+2 > STATE term=2
+0 > SEND 2 AppendEntries 2 0
+2 > STATE state="FOLLOWER"
+0 < LOG JJkMk1uymPRjN1uxERKHbr3bw8ttsYKWcVOMpc3Y7Qs
+2 > STATE leader=0
+1 > Check timeout, 1684726751.7835765,1684726750.7835677, 1.0000364780426025
+1 > STATE state="CANDIDATE"
+1 > STATE term=3
+1 > SEND 0 RequestVotes 3
+1 > SEND 2 RequestVotes 3
+0 > STATE log[5]=[2,"JJkMk1uymPRjN1uxERKHbr3bw8ttsYKWcVOMpc3Y7Qs"]
+2 > SEND 0 AppendEntriesResponse 2 true
+0 > SEND 1 AppendEntries 2 0 ["JJkMk1uymPRjN1uxERKHbr3bw8ttsYKWcVOMpc3Y7Qs"]
+2 < RECEIVE 1 RequestVotes 3
+2 > Receive Message at time 1684726751.9802964
+0 > SEND 2 AppendEntries 2 0 ["JJkMk1uymPRjN1uxERKHbr3bw8ttsYKWcVOMpc3Y7Qs"]
+2 > SEND 1 RequestVotesResponse 3 true
+1 < RECEIVE 2 RequestVotesResponse 3 true
+0 > SEND 1 AppendEntries 2 0
+0 > SEND 2 AppendEntries 2 0
+1 > Receive Message at time 1684726752.136866
+0 < RECEIVE 1 AppendEntriesResponse 2 true
+1 > STATE state="LEADER"
+0 > SEND 1 AppendEntries 2 0
+1 > STATE leader=1
+0 > SEND 2 AppendEntries 2 0
+1 > =================LEADER SELECTED==========
+0 < RECEIVE 2 AppendEntriesResponse 2 true
+1 > SEND 0 AppendEntries 3 1
+0 > SEND 1 AppendEntries 2 0
+2 < RECEIVE 1 AppendEntries 3 1
+1 > SEND 2 AppendEntries 3 1
+2 > Receive Message at time 1684726752.6216419
+0 > SEND 2 AppendEntries 2 0
+2 > STATE term=3
+0 < RECEIVE 2 AppendEntriesResponse 2 true
+2 > STATE state="FOLLOWER"
+0 > SEND 1 AppendEntries 2 0
+2 > STATE leader=1
+2 > SEND 1 AppendEntriesResponse 3 true
+1 < RECEIVE 2 AppendEntriesResponse 3 true
+0 > SEND 2 AppendEntries 2 0
+1 > SEND 0 AppendEntries 3 1
+0 < RECEIVE 1 AppendEntriesResponse 2 true
+1 > SEND 2 AppendEntries 3 1
+2 < RECEIVE 1 AppendEntries 3 1
+0 > SEND 1 AppendEntries 2 0
+2 > Receive Message at time 1684726753.07114
+0 > SEND 2 AppendEntries 2 0
+2 > STATE term=3
+0 < RECEIVE 2 AppendEntriesResponse 2 true
+2 > STATE state="FOLLOWER"
+0 > SEND 1 AppendEntries 2 0
+2 > STATE leader=1
+1 < RECEIVE 2 AppendEntriesResponse 3 true
+0 > SEND 2 AppendEntries 2 0
+2 > SEND 1 AppendEntriesResponse 3 true
+1 > SEND 0 AppendEntries 3 1
+0 < RECEIVE 1 AppendLogResponse 2 true
+1 > SEND 2 AppendEntries 3 1
+0 > STATE commitIndex=5
+0 > COMMITTED JJkMk1uymPRjN1uxERKHbr3bw8ttsYKWcVOMpc3Y7Qs 5
+2 < RECEIVE 1 AppendEntries 3 1
+0 > SEND 1 Committed 2 5
+2 > Receive Message at time 1684726753.7057264
+0 > SEND 2 Committed 2 5
+2 > STATE term=3
+0 > SEND 1 AppendEntries 2 0
+2 > STATE state="FOLLOWER"
+0 > SEND 2 AppendEntries 2 0
+2 > STATE leader=1
+1 < RECEIVE 2 AppendEntriesResponse 3 true
+2 > SEND 1 AppendEntriesResponse 3 true
+0 < RECEIVE 2 AppendEntriesResponse 2 true
+0 > SEND 1 AppendEntries 2 0
+1 > SEND 0 AppendEntries 3 1
+0 > SEND 2 AppendEntries 2 0
+2 < RECEIVE 1 AppendEntries 3 1
+1 > SEND 2 AppendEntries 3 1
+2 > Receive Message at time 1684726754.2691412
+0 < RECEIVE 1 AppendEntriesResponse 2 true
+0 > SEND 1 AppendEntries 2 0
+2 > STATE term=3
+2 > STATE state="FOLLOWER"
+0 > SEND 2 AppendEntries 2 0
+2 > STATE leader=1
+0 < RECEIVE 2 AppendLogResponse 2 true
+2 > SEND 1 AppendEntriesResponse 3 true
+1 < RECEIVE 2 AppendEntriesResponse 3 true
+0 > SEND 1 AppendEntries 2 0
+1 > SEND 0 AppendEntries 3 1
+0 > SEND 2 AppendEntries 2 0
+1 > SEND 2 AppendEntries 3 1
+2 < RECEIVE 1 AppendEntries 3 1
+0 < RECEIVE 1 AppendEntriesResponse 2 true
+2 > Receive Message at time 1684726754.890338
+2 > STATE term=3
+0 > SEND 1 AppendEntries 2 0
+2 > STATE state="FOLLOWER"
+0 > SEND 2 AppendEntries 2 0
+2 > STATE leader=1
+2 > SEND 1 AppendEntriesResponse 3 true
+0 < RECEIVE 2 AppendEntriesResponse 2 true
+1 < RECEIVE 2 AppendEntriesResponse 3 true
+1 > SEND 0 AppendEntries 3 1
+0 > SEND 1 AppendEntries 2 0
+1 > SEND 2 AppendEntries 3 1
+2 < RECEIVE 1 AppendEntries 3 1
+0 > SEND 2 AppendEntries 2 0
+0 < RECEIVE 1 RequestVotes 3
+2 > Receive Message at time 1684726755.4157991
+0 > SEND 1 AppendEntries 2 0
+2 > STATE term=3
+0 > SEND 1 AppendEntries 2 0
+2 > STATE state="FOLLOWER"
+0 > SEND 2 AppendEntries 2 0
+2 > STATE leader=1
+0 < RECEIVE 2 AppendEntriesResponse 2 true
+2 > SEND 1 AppendEntriesResponse 3 true
+1 < RECEIVE 2 AppendEntriesResponse 3 true
+1 > SEND 0 AppendEntries 3 1
+0 > SEND 1 AppendEntries 2 0
+1 > SEND 2 AppendEntries 3 1
+2 < RECEIVE 1 AppendEntries 3 1
+0 > SEND 2 AppendEntries 2 0
+2 > Receive Message at time 1684726755.9877005
+2 > STATE term=3
+0 < RECEIVE 1 AppendEntries 3 1
+2 > STATE state="FOLLOWER"
+2 > STATE leader=1
+2 > SEND 1 AppendEntriesResponse 3 true
+0 > STATE term=3
+1 < RECEIVE 2 AppendEntriesResponse 3 true
+0 > STATE state="FOLLOWER"
+1 > SEND 0 AppendEntries 3 1
+0 > STATE leader=1
+1 > SEND 2 AppendEntries 3 1
+2 < RECEIVE 1 AppendEntries 3 1
+0 < RECEIVE 1 AppendEntries 3 1
+0 > Receive Message at time 1684726756.4367957
+2 > Receive Message at time 1684726756.4217467
+0 > STATE term=3
+0 > STATE state="FOLLOWER"
+0 > STATE leader=1
+2 > STATE term=3
+2 > STATE state="FOLLOWER"
+0 > SEND 1 AppendEntriesResponse 3 true
+0 < RECEIVE 1 AppendEntries 3 1
+2 > STATE leader=1
+1 < RECEIVE 2 AppendEntriesResponse 3 true
+2 > SEND 1 AppendEntriesResponse 3 true
+0 > Receive Message at time 1684726756.8399794
+1 > SEND 0 AppendEntries 3 1
+0 > STATE term=3
+1 > SEND 2 AppendEntries 3 1
+2 < RECEIVE 1 AppendEntries 3 1
+0 > STATE state="FOLLOWER"
+2 > Receive Message at time 1684726757.137375
+0 > STATE leader=1
+2 > STATE term=3
+0 > SEND 1 AppendEntriesResponse 3 true
+0 > Check timeout, 1684726757.3401868,1684726756.8399794, 0.5002291202545166
+0 < RECEIVE 1 AppendEntries 3 1
+0 > STATE state="CANDIDATE"
+0 > Receive Message at time 1684726757.3421912
+0 > STATE term=4
+0 < RECEIVE 1 AppendEntries 3 1
+0 > SEND 1 RequestVotes 3
+0 > Receive Message at time 1684726757.3451462
+0 > SEND 2 RequestVotes 3
+0 > STATE term=3
+2 > STATE state="FOLLOWER"
+0 > STATE state="FOLLOWER"
+2 > STATE leader=1
+0 > STATE leader=1
+2 > SEND 1 AppendEntriesResponse 3 true
+1 < RECEIVE 2 AppendEntriesResponse 3 true
+0 > SEND 1 AppendEntriesResponse 3 true
+1 > SEND 0 AppendEntries 3 1
+0 < RECEIVE 1 AppendEntries 3 1
+2 < RECEIVE 1 AppendEntries 3 1
+1 > SEND 2 AppendEntries 3 1
+0 > Receive Message at time 1684726757.6995053
+2 > Receive Message at time 1684726757.759937
+0 > STATE term=3
+0 > STATE state="FOLLOWER"
+2 > STATE term=3
+2 > STATE state="FOLLOWER"
+0 > STATE leader=1
+2 > STATE leader=1
+0 > SEND 1 AppendEntriesResponse 3 true
+1 < RECEIVE 2 AppendEntriesResponse 3 true
+0 < RECEIVE 1 AppendEntries 3 1
+2 > SEND 1 AppendEntriesResponse 3 true
+0 > Check timeout, 1684726758.19951,1684726757.6995053, 0.5000176429748535
+0 > Receive Message at time 1684726758.1999478
+0 < RECEIVE 1 AppendEntries 3 1
+0 > STATE state="FOLLOWER"
+0 > Receive Message at time 1684726758.2018266
+0 > STATE term=3
+0 > STATE term=3
+0 > SEND 1 RequestVotes 3
+0 > STATE state="FOLLOWER"
+0 > SEND 2 RequestVotes 3
+0 > STATE leader=1
+1 > SEND 0 AppendEntries 3 1
+0 > SEND 1 AppendEntriesResponse 3 true
+1 > SEND 2 AppendEntries 3 1
+2 < RECEIVE 1 AppendEntries 3 1
+0 < RECEIVE 1 AppendEntries 3 1
+2 > Receive Message at time 1684726758.3878963
+0 > Receive Message at time 1684726758.434885
+2 > STATE term=3
+2 > STATE state="FOLLOWER"
+0 > STATE term=3
